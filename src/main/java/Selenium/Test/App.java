@@ -21,13 +21,13 @@ public class App
             //Launch the Online Store Website
      		driver.get("https://itecor.com");
       
-            // Print a Log In message to the screen
+            //Print a Log In message to the screen
             System.out.println("Successfully opened the website itecor.com");
              
      		//Wait for 5 Sec
      		Thread.sleep(5000);
      		
-     		// Get all links of Webpage
+     		//Get all links of Webpage
      		List<WebElement> list=driver.findElements(By.xpath("//*[@href]"));
      	    System.out.println("No of links present="+ list.size());
 
@@ -36,7 +36,7 @@ public class App
      	    Thread.sleep(3000);
      	    driver.findElement(By.xpath("/html/body/section/article/div[2]/div[2]/div/div/a[1]")).click();
    	         
-     	    // fetch the title of the web page and print it
+     	    //fetch the title of the web page and print it
      	    System.out.println(driver.getTitle());
      	    
      	    //use of for each for iteration
@@ -45,10 +45,10 @@ public class App
      	    		System.out.println(wb.getAttribute("href") +"  "+wb.getText());
      	    }
      	    
-            // Close the driver
+            //Close the driver
             driver.quit();
             System.out.println("Test script executed successfully.");
-            // terminate the program
+            //terminate the program
             System.exit(0);
     }
 }
